@@ -1,0 +1,27 @@
+.HomeMain {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin: 40px 1%;
+}
+
+@media (max-width: 850px) {
+  .HomeMain {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .HomeMain {
+    grid-template-columns: 1fr;
+  }
+}
+
+.HomeProdutos img {
+  max-width: 250px;
+}
+
+.HomeProdutos img:hover {
+  cursor: pointer;
+}

@@ -1,0 +1,15 @@
+/* Anime.module.css */
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(-5%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.AnimeLeft {
+  animation: slideInFromRight 0.5s ease-out forwards;
+}

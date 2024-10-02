@@ -1,0 +1,61 @@
+.SobreMain {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin: 40px 1%;
+  animation: slideInFromRight 0.5s ease-out forwards;
+}
+
+/* Anime.module.css */
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(-5%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.SobreImage {
+  max-width: 340px;
+}
+
+.SobreContato {
+  list-style: none;
+  position: relative;
+}
+
+.SobreContato li {
+  margin-bottom: 10px;
+}
+
+.SobreContato li::before {
+  content: '';
+  position: absolute;
+  left: -0;
+  margin-top: 10px;
+  width: 15px; /* Comprimento do traço */
+  height: 2px; /* Espessura do traço */
+  background-color: gray; /* Cor do traço */
+  transform: translateY(-50%); /* Centraliza verticalmente o traço */
+}
+
+@media (max-width: 650px) {
+  .SobreMain {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      'text'
+      'image';
+  }
+
+  .SobreImage {
+    grid-area: image;
+  }
+
+  .SobreMain div {
+    grid-area: text;
+  }
+}
